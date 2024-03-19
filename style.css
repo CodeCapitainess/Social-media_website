@@ -41,7 +41,7 @@ body{
     width: 80%;
     margin: 0 auto;
 }
-.profile-photo{
+.profile-picture{
     width: 2.7rem;
     aspect-ratio: 1/1;
     border-radius: 50%;
@@ -92,4 +92,19 @@ nav .search-bar{
     background: var(--color-light);
     border-radius: var(--border-radius);
     padding: var(--search-padding);
+}
+nav .search-bar input[type="search"]{
+    background: transparent;
+    width: 30vw;
+    margin-left: 1rem;
+    font-size: 0.9rem;
+    color: var(--color-dark);
+}
+nav .search-bar input[type="search"]::placeholder{
+    color: var(--color-gray);
+}
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
