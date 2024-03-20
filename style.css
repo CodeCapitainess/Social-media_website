@@ -331,3 +331,22 @@ main .container .left .profile{
     display: flex;
     justify-content: space-between;
 }
+.middle .feed .user{
+    display: flex;
+    gap: 1rem;
+}
+.middle .feed .photo{
+    border-radius: var(--card-border-radius);
+    overflow: hidden;
+    margin: 0.7rem 0;
+}
+.middle .feed .action-buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: auto 0.6rem;
+}
+.middle .liked-by{
+    display: flex;
+}
