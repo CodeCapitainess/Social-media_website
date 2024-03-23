@@ -168,6 +168,16 @@ const changeBG = () => {
     root.style.setProperty('--dark-color-lightness', darkColorLightness);
 }
 
+Bg1.addEventListener('click', () => {
+    // add active class
+    Bg1.classList.add('active');
+    // remove active class from the others
+    Bg2.classList.remove('active');
+    Bg3.classList.remove('active');
+    // remove customized changes from local storage
+    window.location.reload();
+});
+
 Bg2.addEventListener('click', () => {
     darkColorLightness = '95%';
     whiteColorLightness = '20%';
