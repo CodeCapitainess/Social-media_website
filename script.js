@@ -13,6 +13,9 @@ const themeModal = document.querySelector('.customize-theme');
 const fontSizes = document.querySelectorAll('.choose-size span');
 var root = document.querySelector(':root');
 const colorPalette = document.querySelectorAll('.choose-color span');
+const Bg1 = document.querySelector('.bg-1');
+const Bg2 = document.querySelector('.bg-2');
+const Bg3 = document.querySelector('.bg-3');
 
 // ============= Sidebar ============ //
 
@@ -151,4 +154,21 @@ colorPalette.forEach(color => {
 
         root.style.setProperty('--primary-color-hue', primaryHue);
     })
+})
+
+// theme Background values
+let lightColorLightness;
+let whiteColorLightness;
+let darkColorLightness;
+
+Bg2.addEventListener('click', () => {
+    darkColorLightness = '95%';
+    whiteColorLightness = '20%';
+    lightColorLightness = '15%';
+
+    // add active class
+    Bg2.classList.add('active');
+    // remove active class from the others
+    Bg1.classList.remove('active');
+    Bg3.classList.remove('active');
 })
