@@ -365,3 +365,14 @@ main .container .left .profile{
 .middle .liked-by p{
     margin-left: 0.5rem;
 }
+
+/* Right */
+main .container .right{
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+}
+.right .messages{
+    bac
+}
