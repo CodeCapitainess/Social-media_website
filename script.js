@@ -12,6 +12,7 @@ const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme'); 
 const fontSizes = document.querySelectorAll('.choose-size span');
 var root = document.querySelector(':root');
+const colorPalette = document.querySelectorAll('.choose-color span');
 
 // ============= Sidebar ============ //
 
@@ -68,14 +69,15 @@ const openThemeModal = () =>{
     themeModal.style.display = 'grid';
 }
 
-// close modal
+// closes modal
 const closeThemeModal = (e) =>{
     if(e.target.classList.contains('customize-theme')){
         themeModal.style.display = 'none';
     }
 }
 
-themeModal.addEventListener('click', openThemeModal);
+// close modal
+themeModal.addEventListener('click', closeThemeModal);
 theme.addEventListener('click', openThemeModal);
 
 // =========== Fonts ========= //
@@ -87,11 +89,11 @@ const removeSizeSelector = () => {
 }
 
 fontSizes.forEach(size => {
-    removeSizeSelector();
-    let fontSize;
-    size.classList.toggle('active');
 
     size.addEventListener('click', () => {
+        removeSizeSelector();
+        let fontSize;
+        size.classList.toggle('active');
         if(size.classList.contains('font-size-1')){
             fontSize = '10px';
             root.style.setProperty('----sticky-top-left', '5.4rem');
@@ -117,5 +119,23 @@ fontSizes.forEach(size => {
         
     // change font size of the root html element
     document.querySelector('html').style.fontSize = fontSize;
+    })
+})
+
+// change primary colors
+colorPalette.forEach(color => {
+    color.addEventListener('click', () => {
+        let primary;
+        if(color.classList.contains('color-1')){
+            primaryHue = 252;
+        } else if(color.classList.contains('color-2')){
+            primaryHue = 52;
+        } else if(color.classList.contains('color-3')){
+            primaryHue = 352;
+        } else if(color.classList.contains('color-4')){
+            primaryHue = 152;
+        } else if(color.classList.contains('color-5')){
+            primaryHue = 200;
+        }
     })
 })
