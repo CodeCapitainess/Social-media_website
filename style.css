@@ -612,4 +612,26 @@ main .container .right{
     main .container .left .profile{
         display: none;
     }
+    .sidebar h3{
+        display: none;
+    }
+    .left .btn{
+        display: none;
+    }
+}
+
+/* Media queries for small tablets and mobile phones */
+@media screen and (max-width: 992px){
+    nav .search-bar{
+        display: none;
+    }
+    main .container{
+        grid-template-columns: 0 auto 5rem;
+    }
+    main .container .left{
+        grid-column: 3/4;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+    }
 }
