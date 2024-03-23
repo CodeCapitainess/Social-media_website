@@ -61,8 +61,17 @@ messagesNotification.addEventListener('click', () => {
 })
 
 // Theme/Display Cusyomization
+// opens modal
 const openThemeModal = () =>{
     themeModal.style.display = 'grid';
 }
 
+// close modal
+const closeThemeModal = (e) =>{
+    if(e.target.classList.contains('customize-theme')){
+        themeModal.style.display = 'none';
+    }
+}
+
+themeModal.addEventListener('click', openThemeModal);
 theme.addEventListener('click', openThemeModal);
