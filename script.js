@@ -4,7 +4,7 @@ const menuItems = document.querySelectorAll('.menu-item');
 // Messages
 const messagesNotification = document.querySelector('#messages-notifications');
 const messages = document.querySelector('.messages');
-const message = messages.querySelectorAll('.messages');
+const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
 
 // ============= Sidebar ============ //
@@ -34,9 +34,13 @@ menuItems.forEach(item => {
 // searches chats
 const searchMessage = () => {
     const val = messageSearch.value.toLowerCase();
-    console.log(val);
-    message.forEach(chat => {
-        let name = chat.querySelector('h5').textContent.toLocaleLowerCase();
+    message.forEach(user => {
+        let name = user.querySelector('h5').textContent.toLowerCase();
+        if(name.indexOf(val) != -1){
+            user.style.display = 'flex';
+        } else{
+            user.style.display = 'none';
+        }
     })
 }
 
