@@ -10,6 +10,7 @@ const messageSearch = document.querySelector('#message-search');
 // Theme
 const theme = document.querySelector('#theme'); 
 const themeModal = document.querySelector('.customize-theme'); 
+const fontSizes = document.querySelectorAll('.choose-size span');
 
 // ============= Sidebar ============ //
 
@@ -75,3 +76,19 @@ const closeThemeModal = (e) =>{
 
 themeModal.addEventListener('click', openThemeModal);
 theme.addEventListener('click', openThemeModal);
+
+// =========== Fonts ========= //
+fontSizes.forEach(size => {
+    let fontSize;
+    if(size.classList.contains('font-size-1')){
+        fontSize = '10px';
+    } else if(size.classList.contains('font-size-2')){
+        fontSize = '13px';
+    } else if(size.classList.contains('font-size-3')){
+        fontSize = '16px';
+    } else if(size.classList.contains('font-size-4')){
+        fontSize = '19px';
+    } else if(size.classList.contains('font-size-5')){
+        fontSize = '22px';
+    }
+})
