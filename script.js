@@ -1,6 +1,10 @@
 // Sidebar
 const menuItems = document.querySelectorAll('.menu-item');
 
+// Messages
+const messagesNotification = document.querySelector('#messages-notifications');
+const messages = document.querySelector('.messages')
+
 // ============= Sidebar ============ //
 
 // remove active class from all menu items
@@ -21,4 +25,12 @@ menuItems.forEach(item => {
             document.querySelector('#notifications .notification-count').style.display = 'none';
         }
     })
+})
+
+// ============= Sidebar ============ //
+messagesNotification.addEventListener('click', () => {
+    messages.style.boxShadow = '0 0 1rem var(--color-primary)';
+    setTimeout(() => {
+        messages.style.boxShadow = 'none';
+    }, 2000);
 })
