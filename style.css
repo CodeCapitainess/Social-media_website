@@ -408,5 +408,13 @@ main .container .right{
 }
 .right .messages .message{
     display: flex;
-    gap: 1rem;    
+    gap: 1rem;   
+    margin-bottom: 1rem; 
+    align-items: start;
+}
+.right .messages .message:last-child{
+    margin: 0;
+}
+.right .messages .message p{
+    font-size: 0.8rem;
 }
