@@ -412,9 +412,26 @@ main .container .right{
     margin-bottom: 1rem; 
     align-items: start;
 }
+.right .message .profile-picture{
+    position: relative;
+    overflow: visible;
+}
+.right .profile-picture img{
+    border-radius: 50%;
+}
 .right .messages .message:last-child{
     margin: 0;
 }
 .right .messages .message p{
     font-size: 0.8rem;
+}
+.right .messages .message .profile-picture .active{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+    background: var(--color-success);
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
