@@ -474,4 +474,28 @@ main .container .right{
     z-index: 100;
     text-align: center;
     display: grid;
+    place-items: center;
+    font-size: 0.9rem;
+}
+.customize-theme .card{
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: var(--card-border-radius);
+    width: 50%;
+}
+
+/* Font Size */
+.customize-theme .font-size{
+    margin-top: 5rem;
+} 
+.customize-theme .font-size > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+.customize-theme .choose-size{
+    background: var(--color-secondary);
 }
